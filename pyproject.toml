@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "django-check-prefetch"
+version = "0.1.0"
+description = ""
+
+license = "MIT"
+
+authors = [
+    "Can Sarigol <can.sarigol@3megawatt.com>"
+]
+
+packages = [
+    { include="VERSION", from="." },
+]
+
+readme = "README.md"
+
+repository = "https://github.com/3megawatt/django-check-prefetch.git"
+homepage = "https://github.com/3megawatt/django-check-prefetch.git"
+
+keywords = ['django', 'check', 'prefetch']
+
+[tool.poetry.dependencies]
+python = "^3.7"
+django = "^2.2.0"
+
+
+[tool.poetry.dev-dependencies]
+# Test
+nox = "^2019.11.9"
+# Lint
+black = "19.10b0"
+isort = "4.3.21"
+flake8 = "3.7.9"
+flake8-bugbear = "19.8.0"
+flake8-comprehensions = "3.0.1"
+flake8-pie = "0.4.2"
