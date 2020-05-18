@@ -33,3 +33,7 @@ class Books(Model):
     )
 
     objects = BooksManager()
+
+
+class DjangoModel(models.Model):
+    book = models.ManyToManyField(Books, related_name="django_model")

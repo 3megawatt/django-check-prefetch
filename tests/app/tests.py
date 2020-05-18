@@ -1,6 +1,6 @@
 from django.test import TestCase
-from app.models import Books, Author, Reporter
-from check_prefetch import PrefetchUnusedWarning
+from app.models import Books, Author, Reporter, DjangoModel
+from check_prefetch import PrefetchUnusedWarning, Manager
 
 
 class Test(TestCase):
@@ -60,3 +60,6 @@ class Test(TestCase):
             PrefetchUnusedWarning, expected_message="Expected fields : author"
         ):
             list(Books.objects.get_author())
+
+    def test_manipulate_manager(self):
+        list(DjangoModel.objects.values("book"))
